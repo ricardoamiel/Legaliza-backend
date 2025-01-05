@@ -22,7 +22,7 @@ async function bootstrap() {
 
   // Obtener el puerto desde el ConfigService o usar un valor por defecto
   const configService = app.get(ConfigService);
-  const PORT = configService.get<number>('PORT') || 3002;
+  const PORT = configService.get<number>('PORT') || 8080;
 
   await app.listen(PORT);
   console.log(`Application is running on: http://localhost:${PORT}`);
