@@ -20,6 +20,10 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api');
 
+  // Configurar el tiempo de espera de las solicitudes
+  const server = app.getHttpAdapter().getInstance();
+  server.timeout = 5000; // 5 segundos
+
   // Obtener el puerto desde el ConfigService o usar un valor por defecto
   const configService = app.get(ConfigService);
   const PORT = configService.get<number>('PORT') || 8080;
