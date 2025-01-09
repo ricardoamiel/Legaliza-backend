@@ -99,7 +99,7 @@ export class AsuntosNoContenciososService {
 
       enviarCorreo(
         email,
-        `Asuntos No Contenciosos Numero Tramite: ${data.numeroProceso}`,
+        `Asuntos No Contenciosos Numero Tramite: ${dataTramite.numeroTramite}`,
         `Falta adjuntar los siguientes documentos:
           <ul>
             ${documentosFaltantes.map(doc => `<li>${doc}</li>`).join('')}

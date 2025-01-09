@@ -88,7 +88,7 @@ export class TransferenciaVehicularService {
       numeroProceso: numeroProceso,
     });
 
-    await this.tramiteService.create({
+    const dataTramite = await this.tramiteService.create({
       idTipoTramite: data['_id'].toString(),
       tipoTramite: 'transferencia-vehicular',
       idUsuario: usuarioData['_id'],
@@ -115,7 +115,7 @@ export class TransferenciaVehicularService {
 
       enviarCorreo(
         email,
-        `Transferencia Vehicular Numero Tramite: ${data.numeroProceso}`,
+        `Transferencia Vehicular Numero Tramite: ${dataTramite.numeroTramite}`,
         `Falta adjuntar los siguientes documentos:
           <ul>
             ${documentosFaltantes.map(doc => `<li>${doc}</li>`).join('')}
