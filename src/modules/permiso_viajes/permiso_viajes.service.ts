@@ -37,7 +37,7 @@ export class PermisoViajesService {
       const [nombres, apellidos] = email.split('@')[0].split('.');
       const usuario = {
         nombres: nombres || "",
-        apellidos: apellidos || "",
+        apellidos: apellidos || " ",
         email: email,
         tipoUsuario: 'CLIENTE',
       };

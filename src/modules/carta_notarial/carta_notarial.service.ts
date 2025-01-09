@@ -32,7 +32,7 @@ export class CartaNotarialService {
       const [nom_, ap_] = email.split('@')[0].split('.');
       const usuario = {
         nombres: nom_ || "",
-        apellidos: ap_ || "",
+        apellidos: ap_ || " ",
         email: email,
         tipoUsuario: 'CLIENTE',
       }
