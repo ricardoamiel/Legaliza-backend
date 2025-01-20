@@ -22,7 +22,7 @@ import { ConstitucionEmpresaModule } from './modules/constitucion_empresa/consti
     MongooseModule.forRoot(
       //`mongodb://${process.env.MONGO_ROOT_USERNAME}:${process.env.MONGO_INITDB_ROOT_PASSWORD}@127.0.0.1:${process.env.MONGO_PORT}/${process.env.MONGO_DB_NAME}?authSource=legaliza-db`,
       //`mongodb://${process.env.MONGO_ROOT_USERNAME}:${process.env.MONGO_INITDB_ROOT_PASSWORD}@mongodb.railway.internal:${process.env.MONGO_PORT}?authSource=admin`,
-      `mongodb://${process.env.MONGO_ROOT_USERNAME}:${process.env.MONGO_INITDB_ROOT_PASSWORD}@junction.proxy.rlwy.net:48843?authSource=admin`,
+      `mongodb://${process.env.MONGO_ROOT_USERNAME}:${process.env.MONGO_INITDB_ROOT_PASSWORD}@viaduct.proxy.rlwy.net:${process.env.MONGO_PORT_UR}?authSource=admin`,
     ),
     AuthModule,
     UsersModule,
